@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const WorkoutSchema = new mongoose.Schema({
+const WorkoutSchema = new Schema({
   day: { type: Date, required: true },
-  exercises: { type: Schema.Types.ObjectId, ref: "Exercise"}
+  exercises: [{ type: Schema.Types.ObjectId, ref: "Exercise"}]
 });
 
 const Workout = mongoose.model("Workout", WorkoutSchema);

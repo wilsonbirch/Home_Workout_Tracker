@@ -3,8 +3,6 @@ const mongoose = require("mongoose");
 
 const PORT = process.env.PORT || 3000;
 
-const db = require("./models");
-
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
@@ -22,13 +20,8 @@ mongoose.connect(
   }
 );
 
-app.get('/stats', (req,res) => {
-  res.redirect('stats.html');
-})
-
-app.get('/exercise', (req,res) => {
-  res.redirect('exercise.html');
-})
+// routes
+app.use(require("./routes/views"));
 
 app.listen(PORT, () => {
     console.log(`App running on port localhost:${PORT}!`);
