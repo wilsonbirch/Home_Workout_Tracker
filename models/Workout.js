@@ -21,7 +21,7 @@ const WorkoutSchema = new Schema(
         },
         duration: {
           type: Number,
-          required: "Exercise must have a"
+          required: "Exercise must have a Duration"
         },
         weight: {
           type: Number
