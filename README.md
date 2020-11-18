@@ -29,11 +29,11 @@ No special hardware or software is required to use this web app. All you need is
 
 ## Built With
 
-HTML
-CSS
-JavaScript
-express
-mongoose
+- HTML
+- CSS
+- JavaScript
+- express
+- mongoose
 
 ## Author(s)
 
